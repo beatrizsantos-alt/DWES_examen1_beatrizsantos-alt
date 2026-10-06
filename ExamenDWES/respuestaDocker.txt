@@ -1,0 +1,21 @@
+
+// Responde a la pregunta sobre docker del enunciado
+
+
+ docker run -d --name mi_web -p 8080:80 nginx 
+ 
+ Este comando está creando y arrancando un contenedor en segundo plano a nombre de "mi_web",
+ utilizando la imagen de nginx y conectando el puerto 8080 del anfitrión con el puerto 80 
+ del contenedor.
+
+
+ docker run: Crea y arranca el contenedor.
+ -d: Ejecuta en 2º plano.
+ --name mi_web: Asigna al nombre "mi_web" (valor único).
+ -p 8080:80 : Publica el puerto 80 del contenedor en el puerto 8080 del anfitrión.
+ nginx: Es la imagen utilizada de Docker de Nginx.
+
+
+// Bibiografía
+https://opguardian.com/docker-y-podman/
+https://www.campusmvp.es/recursos/post/docker-diferencia-entre-los-comandos-docker-run-docker-start-docker-create-y-docker-exec.aspx?srsltid=AU7gw4UtISaXG5aPfeRhD3ANjD58wbxY_HfSKq8BA9pLkqy9yUN7cueB

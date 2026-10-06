@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Examen de Desarrollo web en entorno servidor</title>
+        <link rel="stylesheet" type="text/css" href="../estilos/estilos.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="../imagenes/favicon.jpeg">
+    </head>
+    <body>
+        <h1>Centro de Ayuda al Empleo</h1>
+        <h2>Formulario de solicitud</h2>
+
+        <!-- Botones para poder consultar después las solicitudes de cada profesion.
+        //cada boton lleva a tabla.php, y le pasa el tipo de profesion -->
+        <button onclick="location.href='../php/tabla.php?tipo=soldadura'">Soldadura</button>
+        <button onclick="location.href='../php/tabla.php?tipo=informatica'">Informatica</button>
+        <button onclick="location.href='../php/tabla.php?tipo=socio'">Asistencia Sociosanitaria</button>
+
+        <form action="../php/tabla.php" method="POST">
+
+        <!-- Este es el formulario, aquí el usuario puede introducir sus datos -->
+
+        Nombre:
+        <input type="text" name="nombre" required>
+        <br>
+        <br>
+
+        Apellidos:
+        <input type="text" name="apellidos" required>
+        <br>
+        <br>
+
+        DNI:
+        <input type="text" name="dni" required>
+        <br>
+        <br>
+
+        Fecha de nacimiento:
+        <input type="date" name="f_nac" required>
+        <br>
+        <br>
+
+        Telefono:
+        <input type="text" name="tlf" required>
+        <br>
+        <br>
+
+        Email:
+        <input type="text" name="email" required>
+        <br>
+        <br>
+        
+        <!-- Uso un selector para que el usuario pueda elegir entre
+        las tres opciones una. -->
+        Profesion:
+        <select name="profesion">
+            <option value="soldadura">Soldadura</option>
+            <option value="informatica">Informatica</option>
+            <option value="asistencia sociosanitaria">Asistencia Sociosanitaria</option>
+        </select>
+        <br>
+        <br>
+
+        <!-- En jornada utilizo dos opciones y las dos tienen el mismo name, para que solo se pueda escoger una opcion
+        Jornada: -->
+        
+        <input type="radio" name="jornadaParcial" value="1" required>Parcial
+        <input type="radio" name="jornadaParcial" value="0" required>Completa
+        <br>
+        <br>
+
+        <!-- Para idiomas uso checkboxs pq se pueden seleccionar dos, una o ninguna.-->
+        Idiomas:
+        <input type="checkbox" name="euskera" value="euskera">Euskera
+        <input type="checkbox" name="ingles" value="ingles">Ingles
+        <br>
+        <br>
+
+        <input type="submit" value="Confirmar">
+        </form>
+    </body>
+</html>
